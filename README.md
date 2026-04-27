@@ -1,5 +1,7 @@
 # ESP-Claw for ESP32-S3 N16R8
 
+![ESP-Claw for ESP32-S3 N16R8](cover.png)
+
 Run an AI agent on a $10 chip. No Linux. No Node.js. No server. Just an ESP32-S3, your Wi-Fi, and a Telegram bot.
 
 This repo contains a pre-built firmware for the **ESP32-S3 N16R8** (16MB flash + 8MB embedded PSRAM) — a board that is not yet in the official ESP-Claw web flasher. Everything here is built on top of [Espressif's esp-claw](https://github.com/espressif/esp-claw), which is the open-source AI agent framework that makes this possible.
