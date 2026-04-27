@@ -4,7 +4,7 @@
 
 Run an AI agent on a $10 chip. No Linux. No Node.js. No server. Just an ESP32-S3, your Wi-Fi, and a Telegram bot.
 
-This repo contains a pre-built firmware for the **ESP32-S3 N16R8** (16MB flash + 8MB embedded PSRAM) — a board that is not yet in the official ESP-Claw web flasher. Everything here is built on top of [Espressif's esp-claw](https://github.com/espressif/esp-claw), which is the open-source AI agent framework that makes this possible.
+> **Credit where it's due:** This repo is a **community board support add-on**, not an original project. The actual AI agent framework is [espressif/esp-claw](https://github.com/espressif/esp-claw), built by [Espressif Systems](https://github.com/espressif). All the hard work is theirs. What this repo adds is a pre-built firmware binary and custom board configuration for the **ESP32-S3 N16R8** (16MB flash + 8MB embedded PSRAM) — a board variant that is not yet included in the official ESP-Claw web flasher.
 
 ---
 
@@ -213,9 +213,19 @@ See [BUILD_FROM_SOURCE.md](BUILD_FROM_SOURCE.md).
 
 ## Credits
 
-- [espressif/esp-claw](https://github.com/espressif/esp-claw) — the AI agent framework this is built on (Apache-2.0)
-- Espressif Systems — for making the ESP32-S3 and ESP-IDF
-- This repo adds board support for the ESP32-S3 N16R8 and a ready-to-flash firmware build
+This repo would not exist without the following:
+
+| Project | What they made | Link |
+|---|---|---|
+| **espressif/esp-claw** | The entire AI agent framework — chat, LLM, Telegram, scheduling, everything | [github.com/espressif/esp-claw](https://github.com/espressif/esp-claw) |
+| **Espressif Systems** | The ESP32-S3 chip, ESP-IDF toolchain, and esptool | [espressif.com](https://www.espressif.com/) |
+| **Anthropic / OpenAI** | The AI models (Claude, GPT) that make the agent actually useful | — |
+| **OpenRouter** | The API gateway used for model access | [openrouter.ai](https://openrouter.ai) |
+
+This repo only adds:
+- A board config for the ESP32-S3 N16R8 (16MB flash + 8MB embedded octal PSRAM)
+- A pre-built binary so you can flash without setting up ESP-IDF
+- This friendly guide
 
 ---
 
